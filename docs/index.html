@@ -7,39 +7,39 @@
         <link rel="stylesheet" href="styles/tailwind.css">
         <script type="module" src="scripts/initTimeline.js"></script>
         <script type="module" src="scripts/login.js"></script>
-
     </head>
-    <body>
-        <div class="top-0 left-0">
-            <div class="w-40 fixed z-0 top-0 left-0"><img src ="/images/logo.jpg" alt="Glitter"></div>
-        </div>
-        <div class="h-full w-40 fixed z-0 top-0 left-0 overflow-hidden pt-40">
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2">Home</button>
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2">Add User</button>
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2">Settings</button>
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" onclick="window.userLogout()">Log Out</a>
+    <body class="pb-20">
+        <div class="logo">
+            <img src ="/images/logo.jpg" alt="Glitter">
         </div>
 
-        <div class="h-full w-40 fixed z-0 top-0 right-0 overflow-hidden">
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2">📝 Post Message</button>
+        <div class="navigation">
+            <button class="hyperlink bold-large block bg-gray-200 pl-8 pr-4 py-2">Home</button>
+            <button class="hyperlink bold-large block bg-gray-100 pl-8 pr-4 py-2">Add User</button>
+            <button class="hyperlink bold-large block bg-gray-200 pl-8 pr-4 py-2">Settings</button>
+            <button class="hyperlink bold-large block bg-gray-100 pl-8 pr-4 py-2" onclick="window.userLogout()">Log Out</a>
         </div>
+
+        <div class="post-message">
+            <button class="font-bold hyperlink text-xl block bg-gray-200 pl-8 py-2">📝 Post Message</button>
+        </div>
+
         <div class="button-container">
             <div class="table pl-80">
-                <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl bg-gray-200 px-8 py-2" id="user-button">User</button>
-                <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl bg-gray-100 px-8 py-2" id= "home-button">Home</button>
-                <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl bg-gray-200 px-8 py-2" id= "public-button">Public</button>
+                <button class="hyperlink bold-large bg-gray-200 px-8 py-2" id="user-button">User</button>
+                <button class="hyperlink bold-large bg-gray-100 px-8 py-2" id="home-button">Home</button>
+                <button class="hyperlink bold-large bg-gray-200 px-8 py-2" id="public-button">Public</button>
             </div>
-    
         </div>
 
-        <div class="pl-40 mb-20">
+        <div class="pl-40">
             <h1>Mockroblog</h1>
             <pre id="timeline-json">
             </pre>
         </div>
 
         <footer class="fixed left-0 bottom-0 w-full text-xl pt-3">
-            <div class="divide-y-2 divide-black divide-solid">
+            <div class="divider">
                 <div></div>
                 <div></div>
             </div>
@@ -48,8 +48,8 @@
                     <p class="font-bold text-black px-8">
                         CS 349 Project 3<br>
                     </p>
-                    <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 px-8" href="about.html">About Us</a><br>
-                    <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 px-8" href="https://github.com/quentinmay/cpsc349-project3">Contact</a>
+                    <a class="hyperlink font-bold px-8" href="/about.html">About Us</a><br>
+                    <a class="hyperlink font-bold px-8" href="https://github.com/quentinmay/cpsc349-project3">Contact</a>
             </div>
         </footer>
     </body>

@@ -629,6 +629,66 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity))
 }
 
+.bold-large {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700
+}
+
+.divider > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(2px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(2px * var(--tw-divide-y-reverse));
+  border-style: solid;
+  --tw-divide-opacity: 1;
+  border-color: rgba(0, 0, 0, var(--tw-divide-opacity));
+}
+
+.hyperlink {
+  --tw-text-opacity: 1;
+  color: rgba(37, 99, 235, var(--tw-text-opacity))
+}
+
+.hyperlink:visited {
+  --tw-text-opacity: 1;
+  color: rgba(124, 58, 237, var(--tw-text-opacity));
+}
+
+.hyperlink:hover {
+  --tw-text-opacity: 1;
+  color: rgba(131, 24, 67, var(--tw-text-opacity));
+  text-decoration: underline;
+}
+
+.logo {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  width: 10rem
+}
+
+.post-message {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 0;
+  height: 100%;
+  width: 10rem;
+  overflow: hidden
+}
+
+.navigation {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+  height: 100%;
+  width: 10rem;
+  overflow: hidden;
+  padding-top: 10rem
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

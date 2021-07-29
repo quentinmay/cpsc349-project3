@@ -9,4 +9,26 @@
         @apply text-white bg-blue-500
     }
 
+    .bold-large {
+        @apply font-bold text-xl
+    }
+    
+    .divider {
+        @apply divide-y-2 divide-black divide-solid
+    }
+
+    .hyperlink {
+        @apply visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600
+    }
+
+    .logo {
+        @apply w-40 fixed z-0 top-0 left-0
+    }
+    .post-message {
+        @apply h-full w-40 fixed z-0 top-0 right-0 overflow-hidden
+    }
+
+    .navigation {
+        @apply h-full w-40 fixed z-0 top-0 left-0 overflow-hidden pt-40
+    }
 }
