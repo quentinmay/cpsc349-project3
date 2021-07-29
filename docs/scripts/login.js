@@ -6,7 +6,7 @@ window.userLogin = function userLogin() {
     let password = document.getElementById('password').value;
     let user = mockroblog.authenticateUser(username, password);
     if (user) {
-        document.cookie = "userID=" + user.id + '; expires=' + new Date(2147483647 * 1000).toUTCString();
+        localStorage.setItem('userID', user.id);
         alert("Login succeeded");
         window.location.replace("/timeline.html");
 
@@ -18,7 +18,7 @@ window.userLogin = function userLogin() {
 
 window.userLogout = function userLogout() {
     if (utility.isLoggedIn()) {
-        document.cookie = "userID=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        localStorage.removeItem('userID');
         window.location.replace("/login.html");
     }
 }
