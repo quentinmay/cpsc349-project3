@@ -8,7 +8,8 @@ window.userLogin = function userLogin() {
     if (user) {
         localStorage.setItem('userID', user.id);
         alert("Login succeeded");
-        window.location.replace("/timeline.html");
+        window.location.replace("/");
+        // window.location.replace("/timeline.html");
 
     } else {
         console.log(username, password, user);
