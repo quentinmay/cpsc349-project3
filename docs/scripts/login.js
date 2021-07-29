@@ -7,6 +7,7 @@ window.userLogin = function userLogin() {
     let user = mockroblog.authenticateUser(username, password);
     if (user) {
         localStorage.setItem('userID', user.id);
+        localStorage.setItem('username', user.username);
         alert("Login succeeded");
         window.location.replace("/");
         // window.location.replace("/timeline.html");
@@ -20,6 +21,7 @@ window.userLogin = function userLogin() {
 window.userLogout = function userLogout() {
     if (utility.isLoggedIn()) {
         localStorage.removeItem('userID');
+        localStorage.removeItem('username');
         window.location.replace("/login.html");
     }
 }

@@ -17,15 +17,22 @@ let homeBtn = document.getElementById('home-button');
 let publicBtn = document.getElementById('public-button');
 
 userBtn.addEventListener('click', () => {
-    const timeline = mockroblog.getUserTimeline(username);
-    const display = document.querySelector('#timeline-json')
-    display.textContent = JSON.stringify(timeline, null, 2)
+    let user = localStorage.getItem("username");
+    if (user) {
+        const timeline = mockroblog.getUserTimeline(user);
+        const display = document.querySelector('#timeline-json')
+        display.textContent = JSON.stringify(timeline, null, 2)
+    }
+
 });
 
 homeBtn.addEventListener('click', () => {
-    const timeline = mockroblog.getHomeTimeline(username);
-    const display = document.querySelector('#timeline-json')
-    display.textContent = JSON.stringify(timeline, null, 2)
+    let user = localStorage.getItem("username");
+    if (user) {
+        const timeline = mockroblog.getHomeTimeline(user);
+        const display = document.querySelector('#timeline-json')
+        display.textContent = JSON.stringify(timeline, null, 2)
+    }
 });
 
 publicBtn.addEventListener('click', () => {
