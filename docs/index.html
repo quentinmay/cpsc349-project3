@@ -5,7 +5,9 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles/tailwind.css">
-        <script type="module" src="scripts/init.js"></script>
+        <script type="module" src="scripts/initTimeline.js"></script>
+        <script type="module" src="scripts/login.js"></script>
+
     </head>
     <body>
         <div class="top-0 left-0">
@@ -15,7 +17,7 @@
             <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2" href="/">Home</a>
             <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" href="/">Add User</a>
             <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2" href="/">Settings</a>
-            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" href="/">Log Out</a>
+            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" onclick="window.userLogout()">Log Out</a>
         </div>
 
         <div class="h-full w-40 fixed z-0 top-0 right-0 overflow-hidden">
