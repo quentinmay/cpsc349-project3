@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mockroblog</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/tailwind.css">
+        <script type="module" src="scripts/initTimeline.js"></script>
+    </head>
+    <body>
+        <div class="top-0 left-0">
+            <div class="w-40 fixed z-0 top-0 left-0"><img src ="/images/logo.jpg" alt="Glitter"></div>
+        </div>
+        <div class="h-full w-40 fixed z-0 top-0 left-0 overflow-hidden pt-40">
+            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2" href="/">Home</a>
+            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" href="/">Add User</a>
+            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2" href="/">Settings</a>
+            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" href="/">Log Out</a>
+        </div>
+
+        <div class="h-full w-40 fixed z-0 top-0 right-0 overflow-hidden">
+            <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2" href="/">📝 Post Message</a>
+        </div>
+
+        <div class="pl-40 mb-20">
+            <h1>Mockroblog</h1>
+            <pre id="timeline-json">
+            </pre>
+        </div>
+
+        <footer class="fixed left-0 bottom-0 w-full text-xl pt-3">
+            <div class="divide-y-2 divide-black divide-solid">
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="flex justify-center text center items-center bg-aqua py-6">
+                    <p class="font-bold text-black px-8">
+                        CS 349 Project 3<br>
+                    </p>
+                    <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 px-8" href="/about-us">About Us</a><br>
+                    <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 px-8" href="https://github.com/quentinmay/cpsc349-project3">Contact</a>
+            </div>
+        </footer>
+    </body>
+</html>
