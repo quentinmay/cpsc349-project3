@@ -13,10 +13,6 @@
         @apply font-bold text-xl
     }
     
-    .divider {
-        @apply divide-y-2 divide-black divide-solid
-    }
-
     .hyperlink {
         @apply visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600
     }
@@ -30,5 +26,9 @@
 
     .navigation {
         @apply h-full w-40 fixed z-0 top-0 left-0 overflow-hidden pt-40
+    }
+
+    .timeline-container {
+        @apply container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center
     }
 }
