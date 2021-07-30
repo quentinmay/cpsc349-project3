@@ -48,7 +48,6 @@ function appendPosts(timelineJson) {
     posts.innerHTML = "";
     for (let post of timelineJson) {
         /*
-        
                 <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
                     <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
                       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
@@ -67,7 +66,7 @@ function appendPosts(timelineJson) {
                 </div>
         */
         let newPost = document.createElement('div');
-        newPost.innerHTML = `                    <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+        newPost.innerHTML = `<div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
     <img src="https://via.placeholder.com/150/3b82f6/FFFFFF?text=${(mockroblog.getUserName(post.user_id))}" class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
     </img>
     <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
