@@ -20,7 +20,13 @@ userBtn.addEventListener('click', () => {
     let user = localStorage.getItem("username");
     if (user) {
         const timeline = mockroblog.getUserTimeline(user);
-        const display = document.querySelector('#timeline-json')
+        const display = document.querySelector('#timeline-json');
+
+
+        for (let post of timeline) {
+            console.log(post);
+        }
+
         display.textContent = JSON.stringify(timeline, null, 2)
     }
 
