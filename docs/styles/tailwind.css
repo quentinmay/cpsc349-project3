@@ -680,41 +680,41 @@ video {
   padding-top: 10rem
 }
 
-.timeline-container {
+.timeline-header {
   width: 100%
 }
 
 @media (min-width: 640px) {
-  .timeline-container {
+  .timeline-header {
     max-width: 640px;
   }
 }
 
 @media (min-width: 768px) {
-  .timeline-container {
+  .timeline-header {
     max-width: 768px;
   }
 }
 
 @media (min-width: 1024px) {
-  .timeline-container {
+  .timeline-header {
     max-width: 1024px;
   }
 }
 
 @media (min-width: 1280px) {
-  .timeline-container {
+  .timeline-header {
     max-width: 1280px;
   }
 }
 
 @media (min-width: 1536px) {
-  .timeline-container {
+  .timeline-header {
     max-width: 1536px;
   }
 }
 
-.timeline-container {
+.timeline-header {
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -725,7 +725,7 @@ video {
 }
 
 @media (min-width: 768px) {
-  .timeline-container {
+  .timeline-header {
     flex-direction: row;
   }
 }
