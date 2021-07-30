@@ -38,6 +38,19 @@ export function authenticateUser(username, password) {
   return null
 }
 
+export function getUserName(userID) {
+  switch (userID) {
+    case 1:
+      return "ProfAvery";
+    case 2:
+      return "KevinAWortman";
+    case 3:
+      return "Beth_CSUF";
+    default:
+      return null;
+  }
+}
+
 export function addFollower(userId, userIdToFollow) {
   if (userId > 3) {
     return {
