@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: Git Checkout
       uses: actions/checkout@v2
-    - run: npx tailwindcss --input src/tailwind.css --output docs/styles/tailwind.css --watch
+    # - run: npx tailwindcss --input src/tailwind.css --output docs/styles/tailwind.css --watch
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
