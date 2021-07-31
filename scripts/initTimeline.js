@@ -9,7 +9,8 @@ function onBoot() {
         populateTimeline();
     } else { // If not logged in, take them back to the log-in page
         // window.location.replace("/login.html");
-        window.location.href = './login.html';
+        window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/login.html`)
+        // window.location.href = `${window.location.pathname}/login.html`;
 
     }
 }
