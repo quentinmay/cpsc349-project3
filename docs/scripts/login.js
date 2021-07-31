@@ -9,7 +9,7 @@ window.userLogin = function userLogin() {
         localStorage.setItem('userID', user.id);
         localStorage.setItem('username', user.username);
         alert("Login succeeded");
-        window.location.href = '/index.html';
+        window.location.href = './index.html';
         // window.location.replace("/");
 
     } else {
@@ -22,7 +22,7 @@ window.userLogout = function userLogout() {
     if (utility.isLoggedIn()) {
         localStorage.removeItem('userID');
         localStorage.removeItem('username');
-        window.location.href = 'login.html';
+        window.location.href = './login.html';
         // window.location.replace("/login.html");
     }
 }

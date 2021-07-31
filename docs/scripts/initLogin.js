@@ -6,7 +6,7 @@ onBoot();
 function onBoot() {
     let loggedIn = utility.isLoggedIn();
     if (loggedIn) {
-        window.location.href = '/index.html';
+        window.location.href = './index.html';
         // window.location.replace("/");
     }
 
