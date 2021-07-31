@@ -9,8 +9,8 @@ window.userLogin = function userLogin() {
         localStorage.setItem('userID', user.id);
         localStorage.setItem('username', user.username);
         alert("Login succeeded");
+        //https://stackoverflow.com/questions/16984943/how-to-get-the-directory-part-of-current-url-in-javascript/16985051
         window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/index.html`)
-        // window.location.replace("/");
 
     } else {
         console.log(username, password, user);
@@ -23,7 +23,5 @@ window.userLogout = function userLogout() {
         localStorage.removeItem('userID');
         localStorage.removeItem('username');
         window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/login.html`)
-        // window.location.href = `${window.location.pathname}/login.html`;
-        // window.location.replace("/login.html");
     }
 }
