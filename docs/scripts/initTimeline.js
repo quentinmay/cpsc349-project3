@@ -21,12 +21,12 @@ let publicBtn = document.getElementById('public-button');
 let followButn = document.getElementById('follow-button');
 let formerBtn = 'Unfollow';
 
-// Follow Button
-followButn.addEventListener('click', () => {
-    const tmpBtn = followButn.innerHTML;
-    followButn.innerHTML = formerBtn;
-    formerBtn = tmpBtn;
-});
+// // Follow Button
+// followButn.addEventListener('click', () => {
+//     const tmpBtn = followButn.innerHTML;
+//     followButn.innerHTML = formerBtn;
+//     formerBtn = tmpBtn;
+// });
 
 // User Timeline Button
 userBtn.addEventListener('click', () => {
@@ -97,10 +97,20 @@ function appendPosts(timelineJson) {
         let followBtn = newPost.children[0].children[1].children[3];
         followBtn.addEventListener('click', () => {
             let loggedInUser = localStorage.getItem("userID");
-            if (loggedInUser && post.user_id) {
-                mockroblog.addFollower(loggedInUser, post.user_id)
-                console.log(`Added follower: ${post.user_id}`);
+            if (followBtn.textContent === "Follow") {
+                if (loggedInUser && post.user_id) {
+                    mockroblog.addFollower(loggedInUser, post.user_id)
+                    console.log(`Added follower: ${post.user_id}`);
+                    followBtn.textContent = "Unfollow";
+                }
+            } else if (followBtn.textContent === "Unfollow") {
+                if (loggedInUser && post.user_id) {
+                    mockroblog.removeFollower(loggedInUser, post.user_id)
+                    console.log(`Removed follower: ${post.user_id}`);
+                    followBtn.textContent = "Follow";
+                }
             }
+
         });
         posts.appendChild(newPost);
     }
