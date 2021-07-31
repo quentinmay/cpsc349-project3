@@ -1,5 +1,4 @@
 name: Publish to gh-pages
-
 on:
   push:
     paths-ignore:
@@ -7,10 +6,11 @@ on:
 
 jobs:
   build:
+    name: gh-pages build
     runs-on: ubuntu-latest
     steps:
     - name: Git Checkout
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
     - name: Build tailwind
     - run: npx tailwindcss --input src/tailwind.css --output docs/styles/tailwind.css --watch
     - name: Deploy
