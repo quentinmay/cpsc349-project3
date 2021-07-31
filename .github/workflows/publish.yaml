@@ -5,7 +5,7 @@ on:
       - README.md
 
 jobs:
-  build:
+  build-deploy:
     name: gh-pages build
     runs-on: ubuntu-latest
     steps:
@@ -16,5 +16,5 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./docs
+        github_token: ${{ secrets.GITHUB_TOKEN }}
