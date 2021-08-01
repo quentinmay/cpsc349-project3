@@ -18,11 +18,23 @@ let userBtn = document.getElementById('user-button');
 let homeBtn = document.getElementById('home-button');
 let publicBtn = document.getElementById('public-button');
 let postBtn = document.getElementById('post-button');
+let logoutBtn = document.getElementById('logout-button');
+
+// Logout Button
+logoutBtn.addEventListener('click', () => {
+    utility.userLogout();
+});
 
 // Post Message Button
 postBtn.addEventListener('click', () => {
-    var postTime = prompt("Please provide a post");
-    alert("You have posted.");
+    var postMsg = prompt("Please provide a post", "Today I experienced...");
+    if (postMsg != null) {
+        alert("Your message is empty. Please try again.");
+    }
+    else {
+        mockroblog.postMessage("postMessage", )
+    }
+    //alert("You have posted.");
 });
 
 // User Timeline Button
