@@ -17,11 +17,3 @@ window.userLogin = function userLogin() {
         alert("Login failed.");
     }
 }
-
-window.userLogout = function userLogout() {
-    if (utility.isLoggedIn()) {
-        localStorage.removeItem('userID');
-        localStorage.removeItem('username');
-        window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/login.html`)
-    }
-}
