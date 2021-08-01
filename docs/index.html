@@ -27,20 +27,17 @@
         </div>
 
         <div class="post-message">
-            <button class="font-bold hyperlink text-xl block bg-gray-200 p-8">📝 Post Message</button>
+            <button class="font-bold hyperlink text-xl block bg-gray-200 p-8" id="post-button" onclick="showTextBox()">📝 Post Message</button>
               <form action="/my-handling-form-page" method="post">
-              <ul>
-               <li>
-            
-             <label for="msg">What is your mind?</label>
-             <textarea id="msg" name="user_message"></textarea>
-           </li>
-          </ul>
-          <div class="button">
-            <button type="submit">Share your post</button>
           </div>
          </form>
         </div>
+        <ul>
+          <li class="post-message2">
+            <label for="email" class="leading-7 text-sm text-gray-600">What is on your mind?</label>
+          <input type="msg" id="email" name="user_message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          </li>
+        </ul>
 
         <div class="pl-40">
             <div class="timeline-container">

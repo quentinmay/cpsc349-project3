@@ -669,6 +669,16 @@ video {
   overflow: hidden
 }
 
+.post-message2 {
+  position: fixed;
+  top: 6rem;
+  right: 0px;
+  z-index: 0;
+  height: 100%;
+  width: 20rem;
+  overflow: hidden
+}
+
 .navigation {
   position: fixed;
   top: 0px;

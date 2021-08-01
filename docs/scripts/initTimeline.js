@@ -28,6 +28,12 @@ let formerBtn = 'Unfollow';
 //     formerBtn = tmpBtn;
 // });
 
+// Post Message Button
+function showTextBox() {
+    var postTime = prompt("Please provide a post");
+    alert("You have posted.");
+}
+
 // User Timeline Button
 userBtn.addEventListener('click', () => {
     let user = localStorage.getItem("username");
@@ -49,11 +55,6 @@ homeBtn.addEventListener('click', () => {
 publicBtn.addEventListener('click', () => {
     appendPosts(mockroblog.getPublicTimeline());
 });
-
-// Follow Button
-//followBtn.addEventListener('click', () => {
-
-//});
 
 function populateTimeline() {
     appendPosts(mockroblog.getPublicTimeline());
