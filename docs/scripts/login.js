@@ -15,8 +15,11 @@ button.addEventListener('click', () => {
     let user = mockroblog.authenticateUser(username, password);
     if (user) {
         localStorage.setItem('userID', user.id);
+        localStorage.setItem('username', user.username);
         alert("Login succeeded");
-        window.location.replace("/");
+        //https://stackoverflow.com/questions/16984943/how-to-get-the-directory-part-of-current-url-in-javascript/16985051
+        window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/index.html`)
+
     } else {
         console.log(username, password, user);
         alert("Login failed.");

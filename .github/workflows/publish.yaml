@@ -1,0 +1,19 @@
+name: Publish to gh-pages
+on:
+  push:
+    paths-ignore:
+      - README.md
+
+jobs:
+  build-deploy:
+    name: gh-pages build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Checkout
+      uses: actions/checkout@v2
+    # - run: npx tailwindcss --input src/tailwind.css --output docs/styles/tailwind.css --watch
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        publish_dir: ./docs
+        github_token: ${{ secrets.GITHUB_TOKEN }}

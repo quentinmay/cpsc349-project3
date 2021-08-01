@@ -4,53 +4,100 @@
         <title>Mockroblog</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="styles/tailwind.css">
-        <script type="module" src="scripts/initTimeline.js"></script>
-        <script type="module" src="scripts/login.js"></script>
-
+        <link rel="stylesheet" href="./styles/tailwind.css">
+        <script type="module" src="./scripts/initTimeline.js"></script>
+        <script type="module" src="./scripts/login.js"></script>
     </head>
     <body>
-        <div class="top-0 left-0">
-            <div class="w-40 fixed z-0 top-0 left-0"><img src ="/images/logo.jpg" alt="Glitter"></div>
-        </div>
-        <div class="h-full w-40 fixed z-0 top-0 left-0 overflow-hidden pt-40">
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2">Home</button>
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2">Add User</button>
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2">Settings</button>
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-100 pl-8 py-2" onclick="window.userLogout()">Log Out</a>
+        <div class="logo">
+            <img src ="/images/logo.png" alt="Glitter">
         </div>
 
-        <div class="h-full w-40 fixed z-0 top-0 right-0 overflow-hidden">
-            <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl display: block bg-gray-200 pl-8 py-2">📝 Post Message</button>
+        <div class="navigation">
+            <button class="hyperlink bold-large block bg-gray-200 px-4 py-2 w-40">Home</button>
+            <button class="hyperlink bold-large block bg-gray-100 px-4 py-2 w-40" id="logout-button">Log Out</a>
         </div>
-        <div class="button-container">
-            <div class="table pl-80">
-                <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl bg-gray-200 px-8 py-2" id="user-button">User</button>
-                <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl bg-gray-100 px-8 py-2" id= "home-button">Home</button>
-                <button class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 text-xl bg-gray-200 px-8 py-2" id= "public-button">Public</button>
+
+        <div class="timeline-header">
+          <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+              <button class="hyperlink bold-large bg-gray-200 px-8 py-2" id="user-button">User Timeline</button>
+              <button class="hyperlink bold-large bg-gray-100 px-8 py-2" id="home-button">Home Timeline</button>
+              <button class="hyperlink bold-large bg-gray-200 px-8 py-2" id="public-button">Public Timeline</button>
+          </nav>
+        </div>
+
+        <div class="post-message">
+            <button class="font-bold hyperlink text-xl block bg-gray-200 p-8" id="post-button"">📝 Post Message</button>
+              <!-- <form action="/my-handling-form-page" method="post"> 
+          </div>
+         </form> -->
+        </div>
+        <ul>
+          <li class="post-message2">
+            <textarea class="form-textarea mt-1 block w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" rows="3" placeholder="What is on your mind?"></textarea>
+          </label>
+          </li>
+        </ul>
+
+        <div class="pl-40">
+            <div class="timeline-container">
+                <section id="timeline-posts" class="timeline-posts text-gray-600 body-font">
+                    <div id="post-container" class="container px-5 py-24 mx-auto">
+                      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                        <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                          </svg>
+                        </div>
+                        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
+                          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <p class="seperator">seperator</p>
+                      <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
+                        <div class="sm:w-32 sm:h-32 h-20 w-20 sm:mr-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
+                          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="sm:w-16 sm:h-16 w-10 h-10" viewBox="0 0 24 24">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                          </svg>
+                        </div>
+                        <div class="flex-grow sm:text-left text-center mt-6 sm:mt-0">
+                          <h2 class="text-gray-900 text-lg title-font font-medium mb-2">Shooting Stars</h2>
+                          <p class="leading-relaxed text-base">Blue bottle crucifix vinyl post-ironic four dollar toast vegan taxidermy. Gastropub indxgo juice poutine.</p>
+                          <a class="mt-3 text-indigo-500 inline-flex items-center">Learn More
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                              <path d="M5 12h14M12 5l7 7-7 7"></path>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                <pre id="timeline-json">
+
+                </pre>
             </div>
-    
         </div>
 
-        <div class="pl-40 mb-20">
-            <h1>Mockroblog</h1>
-            <pre id="timeline-json">
-            </pre>
-        </div>
-
-        <footer class="fixed left-0 bottom-0 w-full text-xl pt-3">
-            <div class="divide-y-2 divide-black divide-solid">
-                <div></div>
-                <div></div>
-            </div>
-
-            <div class="flex justify-center text center items-center bg-aqua py-6">
-                    <p class="font-bold text-black px-8">
-                        CS 349 Project 3<br>
-                    </p>
-                    <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 px-8" href="about.html">About Us</a><br>
-                    <a class="font-bold text-black visited:text-purple-600 hover:text-pink-900 hover:underline text-blue-600 px-8" href="https://github.com/quentinmay/cpsc349-project3">Contact</a>
-            </div>
-        </footer>
-    </body>
+  <footer class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Group 6</span>
+      </a>
+      <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© 2021  — CS 349 Project 3</p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <a class="hyperlink font-bold px-8" href="./about.html">About Us</a>
+        <a class="hyperlink font-bold px-8" href="https://github.com/quentinmay/cpsc349-project3">Contact</a>
+      </span>
+    </div>
+  </footer>
 </html>
