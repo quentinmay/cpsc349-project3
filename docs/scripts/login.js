@@ -30,8 +30,6 @@ registerButton.addEventListener('click', () => {
     localStorage.setItem('userID', createdUser.id)
     localStorage.setItem('username', createdUser.username)
     window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/index.html`)
-  } else {
-    alert('An Account with that information already exists. Please try again.')
   }
 })
 
