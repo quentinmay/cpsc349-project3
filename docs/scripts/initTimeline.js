@@ -10,7 +10,6 @@ function onBoot() {
     } else { // If not logged in, take them back to the log-in page
         //https://stackoverflow.com/questions/16984943/how-to-get-the-directory-part-of-current-url-in-javascript/16985051
         window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/login.html`)
-
     }
 }
 
@@ -18,8 +17,8 @@ function onBoot() {
 let userBtn = document.getElementById('user-button');
 let homeBtn = document.getElementById('home-button');
 let publicBtn = document.getElementById('public-button');
-let followButn = document.getElementById('follow-button');
-let formerBtn = 'Unfollow';
+//let followButn = document.getElementById('follow-button');
+//let formerBtn = 'Unfollow';
 
 // // Follow Button
 // followButn.addEventListener('click', () => {

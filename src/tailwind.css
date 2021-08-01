@@ -26,7 +26,7 @@
     }
 
     .post-message2 {
-        @apply h-full w-80 fixed z-0 top-24 right-0 overflow-hidden
+        @apply h-full w-80 fixed z-0 top-40 right-0 overflow-hidden
     }
 
     .navigation {
