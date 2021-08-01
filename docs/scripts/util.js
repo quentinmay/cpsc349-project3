@@ -9,3 +9,13 @@ export function isLoggedIn() {
         return null;
     }
 }
+
+export function userLogout() {
+    if (isLoggedIn()) {
+        localStorage.removeItem('userID');
+        localStorage.removeItem('username');
+        window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/login.html`);
+        return true;
+    }
+    return false;
+}
