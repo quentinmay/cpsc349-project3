@@ -28,13 +28,14 @@ logoutBtn.addEventListener('click', () => {
 // Post Message Button
 postBtn.addEventListener('click', () => {
     var postMsg = prompt("Please provide a post", "Today I experienced...");
-    if (postMsg != null) {
-        alert("Your message is empty. Please try again.");
+    if (postMsg != "") {
+        let user = localStorage.getItem("userID")
+        mockroblog.postMessage(user, postMsg);
+        alert("You have posted a new message.");
     }
     else {
-        mockroblog.postMessage("postMessage", )
+        alert("Your message is empty. Please try again.");
     }
-    //alert("You have posted.");
 });
 
 // User Timeline Button
