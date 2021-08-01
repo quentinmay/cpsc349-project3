@@ -17,21 +17,13 @@ function onBoot() {
 let userBtn = document.getElementById('user-button');
 let homeBtn = document.getElementById('home-button');
 let publicBtn = document.getElementById('public-button');
-//let followButn = document.getElementById('follow-button');
-//let formerBtn = 'Unfollow';
-
-// // Follow Button
-// followButn.addEventListener('click', () => {
-//     const tmpBtn = followButn.innerHTML;
-//     followButn.innerHTML = formerBtn;
-//     formerBtn = tmpBtn;
-// });
+let postBtn = document.getElementById('post-button');
 
 // Post Message Button
-function showTextBox() {
+postBtn.addEventListener('click', () => {
     var postTime = prompt("Please provide a post");
     alert("You have posted.");
-}
+});
 
 // User Timeline Button
 userBtn.addEventListener('click', () => {
@@ -112,7 +104,6 @@ function appendPosts(timelineJson) {
                     updateTimeline(false, post.user_id);
                 }
             }
-
         });
         posts.appendChild(newPost);
     }
@@ -128,5 +119,4 @@ function updateTimeline(follow, userID) {
             followBtn.textContent = (follow ? "Unfollow" : "Follow");
         }
     }
-
 }
