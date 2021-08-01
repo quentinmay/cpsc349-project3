@@ -27,17 +27,17 @@ logoutBtn.addEventListener('click', () => {
 
 // Post Message Button
 postBtn.addEventListener('click', () => {
-  const postMsg = prompt('Please provide a post', 'Today I experienced...')
-  if (postMsg != '' && postMsg != null) {
-    const user = localStorage.getItem('userID')
+  const postMsg = window.prompt('Please provide a post', 'Today I experienced...')
+  if (postMsg !== '' && postMsg !== null) {
+    const user = window.localStorage.getItem('userID')
     mockroblog.postMessage(user, postMsg)
-    alert('You have posted a new message.')
+    window.alert('You have posted a new message.')
   }
 })
 
 // User Timeline Button
 userBtn.addEventListener('click', () => {
-  const user = localStorage.getItem('username')
+  const user = window.localStorage.getItem('username')
   if (user) {
     const timeline = mockroblog.getUserTimeline(user)
     appendPosts(timeline)
@@ -46,7 +46,7 @@ userBtn.addEventListener('click', () => {
 
 // Home Timeline Button
 homeBtn.addEventListener('click', () => {
-  const user = localStorage.getItem('username')
+  const user = window.localStorage.getItem('username')
   if (user) {
     appendPosts(mockroblog.getHomeTimeline(user))
   }
@@ -99,7 +99,7 @@ function appendPosts (timelineJson) {
     // Add follower
     const followBtn = newPost.children[0].children[1].children[3]
     followBtn.addEventListener('click', () => {
-      const loggedInUser = localStorage.getItem('userID')
+      const loggedInUser = window.localStorage.getItem('userID')
       if (followBtn.textContent === 'Follow') {
         if (loggedInUser && post.user_id) {
           mockroblog.addFollower(loggedInUser, post.user_id)

@@ -1,5 +1,4 @@
 import * as mockroblog from './mockroblog.js'
-import * as utility from './util.js'
 
 const loginButton = document.getElementById('loginButton')
 loginButton.addEventListener('click', () => {
@@ -7,14 +6,14 @@ loginButton.addEventListener('click', () => {
   const password = document.getElementById('passwordN').value
   const user = mockroblog.authenticateUser(username, password)
   if (user) {
-    localStorage.setItem('userID', user.id)
-    localStorage.setItem('username', user.username)
-    alert('Login succeeded')
+    window.localStorage.setItem('userID', user.id)
+    window.localStorage.setItem('username', user.username)
+    window.alert('Login succeeded')
     // https://stackoverflow.com/questions/16984943/how-to-get-the-directory-part-of-current-url-in-javascript/16985051
     window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/index.html`)
   } else {
     console.log(username, password, user)
-    alert('Login failed.')
+    window.alert('Login failed.')
   }
 })
 
@@ -26,9 +25,9 @@ registerButton.addEventListener('click', () => {
   const createdUser = mockroblog.createUser(username, email, password)
 
   if (createdUser) {
-    alert('Account successfully created. Please Login')
-    localStorage.setItem('userID', createdUser.id)
-    localStorage.setItem('username', createdUser.username)
+    window.alert('Account successfully created. Please Login')
+    window.localStorage.setItem('userID', createdUser.id)
+    window.localStorage.setItem('username', createdUser.username)
     window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/index.html`)
   }
 })
