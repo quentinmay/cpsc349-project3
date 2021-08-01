@@ -1,8 +1,6 @@
-import * as mockroblog from './mockroblog.js'
-
 export function isLoggedIn () {
-  const username = localStorage.getItem('username')
-  const userID = localStorage.getItem('userID')
+  const username = window.localStorage.getItem('username')
+  const userID = window.localStorage.getItem('userID')
   if (userID && username) {
     return userID
   } else {
@@ -12,8 +10,8 @@ export function isLoggedIn () {
 
 export function userLogout () {
   if (isLoggedIn()) {
-    localStorage.removeItem('userID')
-    localStorage.removeItem('username')
+    window.localStorage.removeItem('userID')
+    window.localStorage.removeItem('username')
     window.location.replace(`${document.URL.substr(0, document.URL.lastIndexOf('/'))}/login.html`)
     return true
   }
